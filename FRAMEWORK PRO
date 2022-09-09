@@ -1,2 +1,10 @@
+function _1()
 local loc = game.Players.LocalPlayer
 loc:Kick("PERMA BANNED")
+end
+game.Players.LocalPlayer.Character:WaitForChild("FULLY_LOADED_CHAR")
+_1()
+game.Players.LocalPlayer.CharacterAdded:connect(function()
+    game.Players.LocalPlayer.Character:WaitForChild("FULLY_LOADED_CHAR")
+    _1()
+end)
